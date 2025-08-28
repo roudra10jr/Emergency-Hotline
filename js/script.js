@@ -58,3 +58,8 @@ for (const callBtn of callsBtn) {
 		}
 	});
 }
+
+// clear button functionality:
+getElement("clear-btn").addEventListener("click", function () {
+	getElement("card-container").innerText = "";
+});
