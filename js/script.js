@@ -44,7 +44,7 @@ for (const callBtn of callsBtn) {
 
 			divElement.innerHTML = `
                     <div
-							class="flex justify-between bg-white p-3 rounded-lg"
+							class="flex justify-between bg-white p-3 rounded-lg shadow-sm shadow-gray-300"
 						>
 							<div class="">
 								<h1 class="font-bold text-lg">
@@ -52,7 +52,7 @@ for (const callBtn of callsBtn) {
 								</h1>
 								<p>${number}</p>
 							</div>
-							<h1 class="font-semibold mt-2">${date}</h1>
+							<h1 class="font-semibold text-gray-400 mt-2">${date}</h1>
 					</div>
             `;
 			historyContainer.appendChild(divElement);
@@ -63,6 +63,29 @@ for (const callBtn of callsBtn) {
 }
 
 // clear button functionality:
+
 getElement("clear-btn").addEventListener("click", function () {
 	getElement("card-container").innerText = "";
+});
+
+// copy button functionality: delegation technique
+
+getElement("helpline-box").addEventListener("click", function (e) {
+	// console.log(e.target);
+	if (e.target.className.includes("copy-btn")) {
+		// alert("clicked copy btn");
+		const copyBtn = e.target;
+		const number =
+			copyBtn.parentNode.parentNode.parentNode.children[1].children[1]
+				.children[0].innerText;
+
+		// alert("Number Successfully copied : " + number);
+		navigator.clipboard.writeText(number).then(() => {
+			alert("Number successfully copied: " + number);
+		});
+
+		const copyCount = getElement("copy-count").innerText;
+		const totalCopy = Number(copyCount) + 1;
+		getElement("copy-count").innerText = totalCopy;
+	}
 });
