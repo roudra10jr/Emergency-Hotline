@@ -6,6 +6,7 @@ function getElement(id) {
 	return element;
 }
 
+// heart-icon click functionality :
 const allHeart = document.getElementsByClassName("heart-click");
 
 for (const heart of allHeart) {
@@ -16,6 +17,8 @@ for (const heart of allHeart) {
 		getElement("heart-count").innerText = totalCount;
 	});
 }
+
+// call button mechanism :
 
 const callsBtn = document.getElementsByClassName("btn-call");
 // console.log(CallsBtn);
