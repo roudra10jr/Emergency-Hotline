@@ -25,10 +25,10 @@
 	<body class="hind-madurai-font">
 		<header>
 			<nav
-				class="flex flex-col md:flex-row justify-between items-center max-w-[1600px] min-h-[70px] mx-auto bg-white"
+				class="flex flex-col lg:flex-row justify-between items-center max-w-[1600px] min-h-[70px] mx-auto bg-white"
 			>
 				<div
-					class="left-div flex w-full justify-between items-center md:justify-start gap-2 md:gap-1 mb-4 md:mb-0"
+					class="left-div flex w-full justify-between items-center lg:justify-start gap-2 lg:gap-1 mb-4 lg:mb-0"
 				>
 					<figure class="w-[50px]">
 						<img src="./assets/logo.png" alt="" />
@@ -38,17 +38,17 @@
 						Service
 					</h1> -->
 					<h1 class="font-bold text-[#006747] ml-3">
-						<span class="inline mt-7 md:mt-0 md:block"
+						<span class="inline mt-7 lg:mt-0 lg:block"
 							>Emergency</span
 						>
-						<span class="inline mt-7 md:mt-0 md:block"
+						<span class="inline mt-7 lg:mt-0 lg:block"
 							>Service</span
 						>
 					</h1>
 				</div>
-				<div class="right-div flex justify-between gap-7 md:gap-4">
+				<div class="right-div flex justify-between gap-7 lg:gap-4">
 					<div
-						class="bg-[#41FF6B] flex items-center gap-1 px-2 rounded-md w-15"
+						class="bg-[#41ff6b1a] shadow-lg flex items-center gap-1 px-2 rounded-md w-15"
 					>
 						<p class="heart font-bold" id="heart-count">0</p>
 						<img
@@ -59,7 +59,7 @@
 					</div>
 
 					<div
-						class="bg-[#41FF6B] flex items-center gap-1 px-2 rounded-md min-w-[55px]"
+						class="bg-[#41ff6b1a] shadow-lg flex items-center gap-1 px-2 rounded-md min-w-[55px]"
 					>
 						<p id="coin-count" class="font-bold">100</p>
 						<img
@@ -101,10 +101,12 @@
 		<main class="bg-[#f5fff6]">
 			<section
 				id="hotline-container"
-				class="w-11/12 mx-auto py-10 grid grid-cols-12 gap-8"
+				class="w-11/12 mx-auto py-10 grid grid-cols-1 lg:grid-cols-12 gap-8"
 			>
-				<section id="helpline-box" class="col-span-9">
-					<div class="card-container grid grid-cols-3 gap-3">
+				<section id="helpline-box" class="lg:col-span-9">
+					<div
+						class="card-container grid grid-cols-1 lg:grid-cols-3 gap-3"
+					>
 						<!-- card-start here -->
 						<div
 							id="card-1"
@@ -593,7 +595,7 @@
 					</div>
 				</section>
 
-				<aside id="cart-box" class="col-span-3">
+				<aside id="cart-box" class="lg:col-span-3">
 					<div
 						id="call-history-box"
 						class="flex justify-between p-3 bg-white rounded mb-1"
